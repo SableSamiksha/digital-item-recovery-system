@@ -5,12 +5,15 @@ A full-stack web application built using Spring Boot and PostgreSQL
 to help users report lost and found items with image upload support
 
 <h1>🔥 Features</h1>
-- User Authentication
-- Report Lost & Found Items
-- Image Upload
-- Role-based Access (User/Admin)
-- Admin Dashboard
-- Item Matching System
+<ul>
+<li>- User Authentication</li>
+<li>- Report Lost & Found Items</li>
+<li>- Image Upload<li>
+<li>- Role-based Access (User/Admin)</li>
+<li>- Admin Dashboard</li>
+<li>- Item Matching System</li>
+</ul>
+
 
 <h1>🤖 Tech Stack</h1>
 - Java
@@ -19,3 +22,4 @@ to help users report lost and found items with image upload support
 - HTML, CSS
 
 <h1>SCREENSHOT</h1>
+
