@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Found Item - Digital Item Recovery System</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Digital Item Recovery System</h1>
+            <div class="nav-links">
+                <a th:href="@{/dashboard}" class="nav-link">Dashboard</a>
+                <a th:href="@{/lost-items/view}" class="nav-link">View Lost Items</a>
+                <a th:href="@{/found-items/view}" class="nav-link">View Found Items</a>
+                <form th:action="@{/logout}" method="post" style="display: inline;">
+                    <button type="submit" class="btn btn-link">Logout</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h2>Report Found Item</h2>
+            <a th:href="@{/dashboard}" class="btn btn-secondary">Back to Dashboard</a>
+        </div>
+
+        <div class="form-card">
+            <form th:action="@{/found-items/report}" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Item Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Description *</label>
+                    <textarea id="description" name="description" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Date Found *</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Location *</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact">Contact Details *</label>
+                    <input type="text" id="contact" name="contact" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="imageFile">Item Photo (optional)</label>
+                    <input type="file" id="imageFile" name="imageFile" accept="image/*">
+                </div>
+                
+                <button type="submit" class="btn btn-success">Report Found Item</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
